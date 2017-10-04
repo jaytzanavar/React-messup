@@ -1,0 +1,257 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+/************************************/
+header {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #0683c9;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s; }
+
+#logo {
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+  float: left;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header nav {
+  display: inline-block;
+  float: right; }
+
+header nav a {
+  line-height: 150px;
+  margin-left: 20px;
+  color: #9fdbfc;
+  font-weight: 700;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header nav a:hover {
+  color: white; }
+
+header.smaller {
+  height: 75px; }
+
+header.smaller #logo {
+  width: 150px;
+  height: 75px;
+  line-height: 75px;
+  font-size: 30px; }
+
+header.smaller nav a {
+  line-height: 75px; }
+
+@media all and (max-width: 660px) {
+  header h1#logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center; }
+
+  header nav {
+    display: block;
+    float: none;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto; }
+
+  header nav a {
+    line-height: 50px;
+    margin: 0 10px; }
+
+  header.smaller {
+    height: 75px; }
+
+  header.smaller h1#logo {
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px; }
+
+  header.smaller nav {
+    height: 35px; }
+
+  header.smaller nav a {
+    line-height: 35px; } }
+/************************************/
+body {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  position: relative;
+  background-color: #337ab7;
+  font-size: 16px; }
+  body .main {
+    background: white;
+    padding: 30px 0;
+    height: 1000px; }
+
+.App {
+  text-align: left; }
+
+.initial {
+  flex: initial;
+  width: 100px; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  order: 1;
+  flex-basis: 80px;
+  flex: 1; }
+
+.App-title {
+  order: 1;
+  flex-basis: 80px;
+  flex: none;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.fixedbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  padding: 6px 20px 6px 10px;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: white; }
+
+.hidefix {
+  display: none; }
+
+.list-inline span {
+  color: #9b9b9b; }
+
+.page-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #cca876 !important; }
+
+.navbarContent {
+  width: 100%;
+  margin-bottom: -12px;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px); }
+
+.list-units {
+  width: 100%;
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  align-items: center; }
+
+.list-units li {
+  display: inline-block;
+  margin: 0px 20px 0px 20px; }
+
+.fixedbar.navbarContent.list-units :after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 10px solid #e5e7e9;
+  width: 100vw; }
+
+.item-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 5%;
+  font-size: 1rem; }
+
+.item-list .pet-item {
+  border-bottom: 1px dotted gray;
+  padding-bottom: 10px; }
+
+.item-list .pet-item:last-child {
+  border-bottom: none; }
+
+.item-list .pet-name {
+  font-weight: 600;
+  color: #337ab7;
+  font-size: 1.3em;
+  line-height: 100%; }
+
+.item-list .pet-info {
+  font-size: 1.7em; }
+
+.item-list .label-item {
+  font-weight: 600;
+  color: #667B82; }
+
+.item-list .pet-delete {
+  font-size: 1.2em; }
+
+.item-list .apt-date {
+  font-style: italic; }
+
+.content {
+  position: relative;
+  background: white;
+  margin-bottom: 272px;
+  overflow: hidden; }
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -1; }
+  footer .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=App.css.map */

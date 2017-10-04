@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+
+    -->
+
+    <script src="classie.js"></script>
+<script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 100,
+                header = document.querySelector("header");
+               var fixbar = document.querySelector(".fixbanch");
+
+
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+                if(classie.has(fixbar,"fixedbar"))
+                {
+                    classie.remove(fixbar,"fixedbar");
+                    classie.add(fixbar,"hidefix");
+                }
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                    let  removehide= document.querySelector(".hidefix");
+                    classie.remove(removehide,"hidefix");
+                    classie.add(removehide,"fixedbar");
+                }
+
+            }
+        });
+    }
+    window.onload = init();
+</script>
+    <title>Lawyers Office</title>
+  </head>
+  <body>
+
+    <header>
+        <div class="fixbanch fixedbar">
+            <div class="navbarContent">
+                <ul class="list-units">
+                    <li>
+                    <div class="list-inline">
+
+
+                            <span class=" page-icon glyphicon glyphicon-envelope"></span>
+                            <span>damoulilawyers@gmail.com</span>
+
+
+                    </div>
+                    </li>
+                    <li>
+                        <div class="list-inline">
+                            <span class= " page-icon glyphicon glyphicon-earphone"></span>
+                            <span>201-6930376</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="list-inline">
+
+                                <span class=" page-icon  glyphicon glyphicon-open-file"></span>
+                                <span>fax: 201-6930378</span>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+      <div class="container clearfix">
+            <img id="logo" src="/logo.svg" class="App-logo" alt="logo" />
+          <nav>
+              <a href="">Lorem</a>
+              <a href="">Ipsum</a>
+              <a href="">Dolor</a>
+          </nav>
+      </div>
+  </header><!-- /header -->
+    <div id='navhead'>
+
+    </div>
+    <div class="main content">
+      <div class="page" id="petratings">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+               <div id="petAppointments"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <footer>
+      <div class="row footer-stuff">
+          <div class="col-md-3">
+            <strong>FIND US ON</strong>
+            <ul>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Pinterest</a></li>
+              <li><a href="">Insta</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <strong>Other PEts shops</strong>
+            <ul>
+              <li><a href="">Red Rob</a></li>
+              <li><a href="">Emerald Eagle</a></li>
+              <li><a href="">Crimson Cra</a></li>
+              <li><a href="">Auburn Abbot</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+          <p><strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <form class="row">
+            <div class="columns eight">
+              <input type="email" placeholder="Your Email" class="u-full-width">
+            </div>
+            <div class="columns four">
+              <input type="submit" class="button-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    </footer>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified CSS -->
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
